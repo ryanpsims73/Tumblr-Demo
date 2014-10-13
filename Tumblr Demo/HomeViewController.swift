@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
 
     @IBOutlet weak var dashboardTextImageView: UIImageView!
     @IBOutlet weak var spinnerImageView: UIImageView!
+    @IBOutlet weak var loginButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,19 +21,13 @@ class HomeViewController: UIViewController {
         dashboardTextImageView.alpha = 0
         self.spinnerImageView.alpha = 1
         
-        UIView.animateWithDuration(0.75, animations: { () -> Void in
-//           self.spinnerImageView.transform = CGAffineTransformMakeScale(2, 2)
-            self.spinnerImageView.transform = CGAffineTransformMakeRotation(CGFloat(90.0 * M_PI)/180.0)
+        UIView.animateWithDuration(0.6, animations: { () -> Void in
+            self.spinnerImageView.transform = CGAffineTransformMakeRotation(CGFloat(60.0 * M_PI)/180.0)
             }) { (finished: Bool) -> Void in
-                UIView.animateWithDuration(0.25, animations: { () -> Void in
+                UIView.animateWithDuration(0.2, animations: { () -> Void in
                     self.dashboardTextImageView.alpha = 1
                 })
         }
-        
-//        delay(10, { () -> () in
-//            self.spinnerImageView.hidden = true
-//            self.dashboardTextImageView.hidden = false
-//        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,6 +35,11 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func loginButtonTap(sender: AnyObject) {
+//        self.performSegueWithIdentifier("loginSegue", sender: self)
+//        parentViewController?.prepareForSegue(segue: "loginSegue", sender: AnyObject?)
+        println(parentViewController);
+    }
 
     /*
     // MARK: - Navigation

@@ -14,6 +14,8 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 
     @IBOutlet weak var contentView: UIScrollView!
     
+    @IBOutlet weak var tipImageView: UIImageView!
+
     @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var composeButton: UIButton!
@@ -39,12 +41,16 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
         // setup our children views
         homeViewController = storyboard.instantiateViewControllerWithIdentifier("HomeViewController") as UIViewController
         searchViewController = storyboard.instantiateViewControllerWithIdentifier("SearchViewController") as UIViewController
-
         accountViewController = storyboard.instantiateViewControllerWithIdentifier("AccountViewController") as UIViewController
         trendingViewController = storyboard.instantiateViewControllerWithIdentifier("TrendingViewController") as UIViewController
         
-        self.homeButtonTap(self)
+        self.tabBarTap(homeButton)
         
+        self.tipImageView.hidden = true
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        showTip()
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,23 +58,28 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func homeButtonTap(sender: AnyObject) {
-        activateTabBarButton(homeButton)
-
-        contentView.addSubview(homeViewController.view)
-        self.addChildViewController(homeViewController)
-        homeViewController.view.frame.origin = CGPoint(x: 0,y: 0)
-        homeViewController.didMoveToParentViewController(self)
-    }
-
-    @IBAction func searchButtonTap(sender: AnyObject) {
-        activateTabBarButton(searchButton)
+    @IBAction func tabBarTap(sender: UIButton) {
+        println(sender.restorationIdentifier)
         
-        contentView.addSubview(searchViewController.view)
-        self.addChildViewController(searchViewController)
-        searchViewController.view.frame.origin = CGPoint(x: 0,y: 0)
-        searchViewController.didMoveToParentViewController(self)
+        var tappedButton: String = sender.restorationIdentifier!
 
+        if tappedButton == "homeButton" {
+            activateTabBarButton(homeButton)
+            loadSubView(homeViewController)
+        } else if tappedButton == "searchButton" {
+            activateTabBarButton(searchButton)
+            loadSubView(searchViewController)
+            // hide tool tip
+            stopTip()
+        } else if tappedButton == "composeButton" {
+          self.performSegueWithIdentifier("composeSegue", sender: self)
+        } else if tappedButton == "accountButton" {
+            activateTabBarButton(accountButton)
+            loadSubView(accountViewController)
+        } else if tappedButton == "trendingButton" {
+            activateTabBarButton(trendingButton)
+            loadSubView(trendingViewController)
+        }
     }
     
     @IBAction func composeButtonTap(sender: AnyObject) {
@@ -76,24 +87,17 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
     }
 
     
-    @IBAction func accountButtonTap(sender: AnyObject) {
-        activateTabBarButton(accountButton)
-        
-        contentView.addSubview(accountViewController.view)
-        self.addChildViewController(accountViewController)
-        accountViewController.view.frame.origin = CGPoint(x: 0,y: 0)
-        accountViewController.didMoveToParentViewController(self)
-        
+    func showTip() {
+        let bobOffset: CGFloat = 8
+        var bobPosition = self.tipImageView.frame.origin.y - bobOffset
+        self.tipImageView.hidden = false
+        UIView.animateWithDuration(0.80, delay: 0.0, options: .Autoreverse | .Repeat, animations: { () -> Void in
+            self.tipImageView.frame.origin.y = bobPosition
+        }, completion: nil)
     }
     
-    @IBAction func trendingButtonTap(sender: AnyObject) {
-        activateTabBarButton(trendingButton)
-        
-        contentView.addSubview(trendingViewController.view)
-        self.addChildViewController(trendingViewController)
-        trendingViewController.view.frame.origin = CGPoint(x: 0,y: 0)
-        trendingViewController.didMoveToParentViewController(self)
-        
+    func stopTip() {
+        self.tipImageView.hidden = true
     }
     
     func activateTabBarButton(activeButton: UIButton) {
@@ -106,6 +110,15 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
 
         var selectedButton: UIButton = activeButton
         selectedButton.selected = true
+    }
+    
+    func loadSubView(subView: UIViewController) {
+        var selectedView: UIViewController = subView
+
+        contentView.addSubview(selectedView.view)
+        self.addChildViewController(selectedView)
+        selectedView.view.frame.origin = CGPoint(x: 0,y: 0)
+        selectedView.didMoveToParentViewController(self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
