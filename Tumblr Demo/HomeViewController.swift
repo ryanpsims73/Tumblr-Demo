@@ -17,14 +17,16 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        dashboardTextImageView.hidden = true
+        dashboardTextImageView.alpha = 0
         self.spinnerImageView.alpha = 1
         
-        UIView.animateWithDuration(1.5, animations: { () -> Void in
+        UIView.animateWithDuration(0.75, animations: { () -> Void in
 //           self.spinnerImageView.transform = CGAffineTransformMakeScale(2, 2)
             self.spinnerImageView.transform = CGAffineTransformMakeRotation(CGFloat(90.0 * M_PI)/180.0)
             }) { (finished: Bool) -> Void in
-            self.dashboardTextImageView.hidden = false
+                UIView.animateWithDuration(0.25, animations: { () -> Void in
+                    self.dashboardTextImageView.alpha = 1
+                })
         }
         
 //        delay(10, { () -> () in

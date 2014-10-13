@@ -111,7 +111,7 @@
                                 <rect key="frame" x="87" y="164" width="146" height="146"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_overlay" id="ikL-jM-SlJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_overlay" id="ikL-jM-SlJ">
                                 <rect key="frame" x="0.0" y="283" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -224,6 +224,14 @@
                         </subviews>
                         <color key="backgroundColor" red="0.19607843137254902" green="0.27058823529411763" blue="0.36078431372549019" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="chatButton" destination="lSx-Y2-kpj" id="al1-4p-6m6"/>
+                        <outlet property="linkButton" destination="xeu-Nb-ZRB" id="eXU-ir-Wzj"/>
+                        <outlet property="photoButton" destination="Zkb-nW-C02" id="Nq7-Qp-6QP"/>
+                        <outlet property="quoteButton" destination="Sws-bt-1Xy" id="lVl-wY-2UV"/>
+                        <outlet property="textButton" destination="SxR-Zq-tNu" id="nIq-Yg-3fj"/>
+                        <outlet property="videoButton" destination="U8q-4h-XTd" id="kF9-4l-Qfp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dgv-gR-Igw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
