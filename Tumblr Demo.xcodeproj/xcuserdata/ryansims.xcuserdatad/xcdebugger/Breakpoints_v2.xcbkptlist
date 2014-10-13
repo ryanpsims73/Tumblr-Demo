@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tumblr Demo/TabBarViewController.swift"
+            timestampString = "434872075.293775"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "TabBarViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tumblr_Demo.TabBarViewController.homeViewController.getter : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIViewController&gt;"
+                  moduleName = "Tumblr Demo"
+                  urlString = "file:///Users/ryansims/Development/codepath/week-5/Tumblr%20Demo/Tumblr%20Demo/TabBarViewController.swift"
+                  timestampString = "434871213.487961"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tumblr_Demo.TabBarViewController.homeViewController.setter : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UIViewController&gt;"
+                  moduleName = "Tumblr Demo"
+                  urlString = "file:///Users/ryansims/Development/codepath/week-5/Tumblr%20Demo/Tumblr%20Demo/TabBarViewController.swift"
+                  timestampString = "434871213.488291"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tumblr_Demo.TabBarViewController.init (Tumblr_Demo.TabBarViewController.Type)(nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;ObjectiveC.NSBundle&gt;) -&gt; Tumblr_Demo.TabBarViewController"
+                  moduleName = "Tumblr Demo"
+                  urlString = "file:///Users/ryansims/Development/codepath/week-5/Tumblr%20Demo/Tumblr%20Demo/TabBarViewController.swift"
+                  timestampString = "434871213.49029"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "382">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tumblr_Demo.TabBarViewController.init (Tumblr_Demo.TabBarViewController.Type)() -&gt; Tumblr_Demo.TabBarViewController"
+                  moduleName = "Tumblr Demo"
+                  urlString = "file:///Users/ryansims/Development/codepath/week-5/Tumblr%20Demo/Tumblr%20Demo/TabBarViewController.swift"
+                  timestampString = "434871213.490477"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "360">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tumblr_Demo.TabBarViewController.init (Tumblr_Demo.TabBarViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; Tumblr_Demo.TabBarViewController"
+                  moduleName = "Tumblr Demo"
+                  urlString = "file:///Users/ryansims/Development/codepath/week-5/Tumblr%20Demo/Tumblr%20Demo/TabBarViewController.swift"
+                  timestampString = "434871213.490657"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "370">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tumblr Demo/TabBarViewController.swift"
+            timestampString = "434873378.9164"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "TabBarViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
