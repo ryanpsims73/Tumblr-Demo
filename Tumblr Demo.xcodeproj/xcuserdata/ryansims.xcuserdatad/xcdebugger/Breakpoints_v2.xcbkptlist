@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tumblr Demo/TabBarViewController.swift"
-            timestampString = "434872075.293775"
+            timestampString = "434876602.44827"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "19"
-            endingLineNumber = "19"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
             landmarkName = "TabBarViewController"
             landmarkType = "3">
             <Locations>
@@ -98,13 +98,59 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Tumblr Demo/TabBarViewController.swift"
-            timestampString = "434873378.9164"
+            timestampString = "434876602.44827"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "108"
-            endingLineNumber = "108"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
+            landmarkName = "animationControllerForPresentedController(_:presentingController:sourceController:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Tumblr Demo/TabBarViewController.swift"
+            timestampString = "434876573.893598"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "11"
+            endingLineNumber = "11"
             landmarkName = "TabBarViewController"
             landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Tumblr_Demo.TabBarViewController.__deallocating_deinit"
+                  moduleName = "Tumblr Demo"
+                  urlString = "file:///Users/ryansims/Development/codepath/week-5/Tumblr%20Demo/Tumblr%20Demo/TabBarViewController.swift"
+                  timestampString = "434876573.899606"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "@objc Tumblr_Demo.TabBarViewController.__ivar_destroyer"
+                  moduleName = "Tumblr Demo"
+                  urlString = "file:///Users/ryansims/Development/codepath/week-5/Tumblr%20Demo/Tumblr%20Demo/TabBarViewController.swift"
+                  timestampString = "434876573.899928"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "11"
+                  endingLineNumber = "11"
+                  offsetFromSymbolStart = "15">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

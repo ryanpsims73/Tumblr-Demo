@@ -10,20 +10,25 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
-    @IBOutlet weak var loadingImageView: UIImageView!
     @IBOutlet weak var dashboardTextImageView: UIImageView!
+    @IBOutlet weak var spinnerImageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        dashboardTextImageView.hidden = false
-        loadingImageView.hidden = true
+        dashboardTextImageView.hidden = true
+        self.spinnerImageView.alpha = 1
         
-//        var loadingImages = UIImage.animatedImageNamed("loading-", duration: 0.75)
-//        loadingImageView.image = loadingImages
-//        delay(2, { () -> () in
-//            self.loadingImageView.hidden = true
+        UIView.animateWithDuration(1.5, animations: { () -> Void in
+//           self.spinnerImageView.transform = CGAffineTransformMakeScale(2, 2)
+            self.spinnerImageView.transform = CGAffineTransformMakeRotation(CGFloat(90.0 * M_PI)/180.0)
+            }) { (finished: Bool) -> Void in
+            self.dashboardTextImageView.hidden = false
+        }
+        
+//        delay(10, { () -> () in
+//            self.spinnerImageView.hidden = true
 //            self.dashboardTextImageView.hidden = false
 //        })
     }
