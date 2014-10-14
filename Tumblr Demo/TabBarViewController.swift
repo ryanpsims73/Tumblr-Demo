@@ -59,7 +59,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
     }
     
     @IBAction func tabBarTap(sender: UIButton) {
-        println(sender.restorationIdentifier)
+        //println(sender.restorationIdentifier)
         
         var tappedButton: String = sender.restorationIdentifier!
 
@@ -144,7 +144,7 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
     }
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        println("animating transition")
+        //println("animating transition")
         var containerView = transitionContext.containerView()
         var toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)!
         var fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)!

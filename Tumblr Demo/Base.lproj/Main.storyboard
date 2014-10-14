@@ -94,7 +94,6 @@
                         <outlet property="tipImageView" destination="I1w-zC-hP2" id="qo3-jo-xSD"/>
                         <outlet property="trendingButton" destination="bDX-5X-3oN" id="eo6-m9-ckM"/>
                         <segue destination="TGa-s8-4a8" kind="modal" identifier="composeSegue" id="gxs-Xa-Ovd"/>
-                        <segue destination="PHf-JQ-F2I" kind="modal" identifier="loginSegue" id="bsW-ML-e03"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -128,7 +127,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginButtonTap:" destination="4iu-4f-04u" eventType="touchUpInside" id="gws-Ky-MvD"/>
+                                    <action selector="loginButtonTap:" destination="4iu-4f-04u" eventType="touchUpInside" id="tVl-sI-Rxv"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -138,6 +137,7 @@
                         <outlet property="dashboardTextImageView" destination="ikL-jM-SlJ" id="Gev-9C-EX7"/>
                         <outlet property="loginButton" destination="LkD-ng-a8u" id="y1Z-Fa-Rt0"/>
                         <outlet property="spinnerImageView" destination="zWj-Nm-EiY" id="h6M-e5-LoS"/>
+                        <segue destination="PHf-JQ-F2I" kind="modal" identifier="loginViewSegue" modalTransitionStyle="crossDissolve" id="RdO-1w-zfK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FU0-dk-98P" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -297,7 +297,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" id="Jmr-Vm-fMe">
-                                <rect key="frame" x="0.0" y="202" width="320" height="163"/>
+                                <rect key="frame" x="0.0" y="153" width="320" height="163"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_form" id="whL-UY-CgT">
@@ -305,20 +305,45 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email" minimumFontSize="17" id="Kcc-85-W5j">
-                                        <rect key="frame" x="27" y="24" width="272" height="30"/>
+                                        <rect key="frame" x="24" y="24" width="275" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" minimumFontSize="17" id="iCd-0f-ahr">
+                                        <rect key="frame" x="24" y="67" width="275" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="al1-2i-JUn">
+                                        <rect key="frame" x="10" y="103" width="153" height="45"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cancelButtonTap:" destination="PHf-JQ-F2I" eventType="touchUpInside" id="OfI-BF-7lF"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.20000000000000001" green="0.25882352939999997" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="Kcc-85-W5j" id="Xql-Eh-g3w"/>
+                        <outlet property="loginFormView" destination="Jmr-Vm-fMe" id="iiD-zw-JWU"/>
+                        <outlet property="passwordTextField" destination="iCd-0f-ahr" id="yMF-5L-01r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="svs-5t-TLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1976" y="1047"/>
+            <point key="canvasLocation" x="162" y="1733"/>
         </scene>
         <!--Account View Controller-->
         <scene sceneID="xcH-pZ-5UN">
