@@ -47,10 +47,11 @@ class TabBarViewController: UIViewController, UIViewControllerTransitioningDeleg
         self.tabBarTap(homeButton)
         
         self.tipImageView.hidden = true
+        showTip()
     }
     
     override func viewDidAppear(animated: Bool) {
-        showTip()
+        //showTip()
     }
 
     override func didReceiveMemoryWarning() {
